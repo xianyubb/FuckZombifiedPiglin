@@ -2,14 +2,14 @@
 
 #include "ll/api/plugin/NativePlugin.h"
 
-namespace my_plugin {
+namespace fuckzombifiedpiglin {
 
-class MyPlugin {
+class FuckZombifiedPiglin {
 
 public:
-    static MyPlugin& getInstance();
+    static FuckZombifiedPiglin& getInstance();
 
-    MyPlugin(ll::plugin::NativePlugin& self) : mSelf(self) {}
+    FuckZombifiedPiglin(ll::plugin::NativePlugin& self) : mSelf(self) {}
 
     [[nodiscard]] ll::plugin::NativePlugin& getSelf() const { return mSelf; }
 
@@ -30,4 +30,4 @@ private:
     ll::plugin::NativePlugin& mSelf;
 };
 
-} // namespace my_plugin
+} // namespace FuckZombifiedPiglin
