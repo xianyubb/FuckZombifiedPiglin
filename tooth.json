@@ -11,7 +11,7 @@
             "plugin"
         ]
     },
-    "asset_url": "My Asset Url",
+    "asset_url": "https://github.com/xianyubb/FuckZombifiedPiglin",
     "prerequisites": {
         "github.com/LiteLDev/LeviLamina": "0.13.3"
     },
