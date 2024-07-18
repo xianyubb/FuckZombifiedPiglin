@@ -1,6 +1,6 @@
 {
     "format_version": 2,
-    "tooth": "FuckZombifiedPiglin",
+    "tooth": "xianyubb/FuckZombifiedPiglin",
     "version": "0.1.0",
     "info": {
         "name": "FuckZombifiedPiglin",
@@ -11,7 +11,6 @@
             "plugin"
         ]
     },
-    "asset_url": "https://github.com/xianyubb/FuckZombifiedPiglin",
     "prerequisites": {
         "github.com/LiteLDev/LeviLamina": "0.13.3"
     },
