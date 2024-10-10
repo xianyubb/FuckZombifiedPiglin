@@ -6,10 +6,7 @@
         "name": "FuckZombifiedPiglin",
         "description": "干翻猪人塔，禁止地狱门生成僵尸猪灵",
         "author": "xianyubb",
-        "tags": [
-            "levilamina",
-            "plugin"
-        ]
+        "tags": ["levilamina", "mod"]
     },
     "prerequisites": {
         "github.com/LiteLDev/LeviLamina": "0.13.3"
@@ -18,7 +15,7 @@
         "place": [
             {
                 "src": "FuckZombifiedPiglin/*",
-                "dest": "plugins/FuckZombifiedPiglin/"
+                "dest": "mods/FuckZombifiedPiglin/"
             }
         ]
     }

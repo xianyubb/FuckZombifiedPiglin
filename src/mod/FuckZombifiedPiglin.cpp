@@ -1,10 +1,10 @@
-#include "plugin/FuckZombifiedPiglin.h"
+#include "mod/FuckZombifiedPiglin.h"
 
 #include <memory>
 
 #include "ll/api/memory/Hook.h"
-#include "ll/api/plugin/NativePlugin.h"
-#include "ll/api/plugin/RegisterHelper.h"
+#include "ll/api/mod/NativeMod.h"
+#include "ll/api/mod/RegisterHelper.h"
 #include "mc/world/actor/common/SpawnChecks.h"
 
 
@@ -28,22 +28,22 @@ FuckZombifiedPiglin& FuckZombifiedPiglin::getInstance() { return *instance; }
 
 bool FuckZombifiedPiglin::load() {
     getSelf().getLogger().info("Loading...");
-    // Code for loading the plugin goes here.
+    // Code for loading the mod goes here.
     return true;
 }
 
 bool FuckZombifiedPiglin::enable() {
     getSelf().getLogger().info("Enabling...");
-    // Code for enabling the plugin goes here.
+    // Code for enabling the mod goes here.
     return true;
 }
 
 bool FuckZombifiedPiglin::disable() {
     getSelf().getLogger().info("Disabling...");
-    // Code for disabling the plugin goes here.
+    // Code for disabling the mod goes here.
     return true;
 }
 
 } // namespace fuckzombifiedpiglin
 
-LL_REGISTER_PLUGIN(fuckzombifiedpiglin::FuckZombifiedPiglin, fuckzombifiedpiglin::instance);
+LL_REGISTER_MOD(fuckzombifiedpiglin::FuckZombifiedPiglin, fuckzombifiedpiglin::instance);

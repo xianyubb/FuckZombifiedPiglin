@@ -333,7 +333,7 @@ ServiceFabricBackup/
 # Microsoft Fakes
 FakesAssemblies/
 
-# GhostDoc plugin setting file
+# GhostDoc mod setting file
 *.GhostDoc.xml
 
 # Node.js Tools for Visual Studio
@@ -514,7 +514,7 @@ FodyWeavers.xsd
 # CMake
 cmake-build-*/
 
-# Mongo Explorer plugin
+# Mongo Explorer mod
 .idea/**/mongoSettings.xml
 
 # File-based project format
@@ -523,19 +523,19 @@ cmake-build-*/
 # IntelliJ
 out/
 
-# mpeltonen/sbt-idea plugin
+# mpeltonen/sbt-idea mod
 .idea_modules/
 
-# JIRA plugin
-atlassian-ide-plugin.xml
+# JIRA mod
+atlassian-ide-mod.xml
 
-# Cursive Clojure plugin
+# Cursive Clojure mod
 .idea/replstate.xml
 
-# SonarLint plugin
+# SonarLint mod
 .idea/sonarlint/
 
-# Crashlytics plugin (for Android Studio and IntelliJ)
+# Crashlytics mod (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
