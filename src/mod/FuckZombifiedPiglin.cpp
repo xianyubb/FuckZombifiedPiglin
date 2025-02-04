@@ -5,13 +5,13 @@
 #include "ll/api/memory/Hook.h"
 #include "ll/api/mod/NativeMod.h"
 #include "ll/api/mod/RegisterHelper.h"
-#include "mc/world/actor/common/SpawnChecks.h"
+#include "mc/world/actor/SpawnChecks.h"
 
 
 LL_AUTO_STATIC_HOOK(
     ZombifiedPiglinSpawnFromPortalCheckHook,
     ll::memory::HookPriority::Normal,
-    "?canSpawnPigZombieFromPortal@SpawnChecks@@SA_NAEBVDimension@@AEBVRandomize@@@Z",
+    &SpawnChecks::canSpawnPigZombieFromPortal,
     bool,
     class Dimension const& dimension,
     class Randomize const& randomize
@@ -46,4 +46,5 @@ bool FuckZombifiedPiglin::disable() {
 
 } // namespace fuckzombifiedpiglin
 
-LL_REGISTER_MOD(fuckzombifiedpiglin::FuckZombifiedPiglin, fuckzombifiedpiglin::instance);
+
+LL_REGISTER_MOD(fuckzombifiedpiglin::FuckZombifiedPiglin, fuckzombifiedpiglin::FuckZombifiedPiglin::getInstance());
