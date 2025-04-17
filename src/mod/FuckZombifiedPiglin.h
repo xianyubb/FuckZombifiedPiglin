@@ -9,7 +9,7 @@ class FuckZombifiedPiglin {
 public:
     static FuckZombifiedPiglin& getInstance();
 
-    FuckZombifiedPiglin(ll::mod::NativeMod& self) : mSelf(self) {}
+    FuckZombifiedPiglin() : mSelf(*ll::mod::NativeMod::current()) {}
 
     [[nodiscard]] ll::mod::NativeMod& getSelf() const { return mSelf; }
 

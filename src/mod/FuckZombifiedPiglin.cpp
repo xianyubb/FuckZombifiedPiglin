@@ -2,45 +2,61 @@
 
 #include <memory>
 
+#include "ll/api/mod/RegisterHelper.h"
+
 #include "ll/api/memory/Hook.h"
 #include "ll/api/mod/NativeMod.h"
 #include "ll/api/mod/RegisterHelper.h"
 #include "mc/world/actor/SpawnChecks.h"
 
+#include "mc/world/level/block/PortalBlock.h"
+
+
+// LL_AUTO_STATIC_HOOK(
+//     ZombifiedPiglinSpawnFromPortalCheckHook,
+//     ll::memory::HookPriority::Normal,
+//     &SpawnChecks::canSpawnPigZombieFromPortal,
+//     bool,
+//     class Dimension const& dimension,
+//     class Randomize const& randomize
+// ) {
+//     origin(dimension, randomize);
+//     return false;
+// };
 
 LL_AUTO_STATIC_HOOK(
-    ZombifiedPiglinSpawnFromPortalCheckHook,
+    TrySpawnPigZombieHook,
     ll::memory::HookPriority::Normal,
-    &SpawnChecks::canSpawnPigZombieFromPortal,
-    bool,
-    class Dimension const& dimension,
-    class Randomize const& randomize
+    &PortalBlock::trySpawnPigZombie,
+    void,
+    ::BlockSource&,
+    ::BlockPos const&,
+    ::PortalAxis
 ) {
-    origin(dimension, randomize);
-    return false;
-};
+    return;
+}
 
 namespace fuckzombifiedpiglin {
 
 static std::unique_ptr<FuckZombifiedPiglin> instance;
 
-FuckZombifiedPiglin& FuckZombifiedPiglin::getInstance() { return *instance; }
+FuckZombifiedPiglin& FuckZombifiedPiglin::getInstance() {
+    static FuckZombifiedPiglin instance;
+    return instance;
+}
 
 bool FuckZombifiedPiglin::load() {
     getSelf().getLogger().info("Loading...");
-    // Code for loading the mod goes here.
     return true;
 }
 
 bool FuckZombifiedPiglin::enable() {
     getSelf().getLogger().info("Enabling...");
-    // Code for enabling the mod goes here.
     return true;
 }
 
 bool FuckZombifiedPiglin::disable() {
     getSelf().getLogger().info("Disabling...");
-    // Code for disabling the mod goes here.
     return true;
 }
 
