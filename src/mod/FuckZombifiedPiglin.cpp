@@ -38,7 +38,6 @@ LL_AUTO_STATIC_HOOK(
 
 namespace fuckzombifiedpiglin {
 
-static std::unique_ptr<FuckZombifiedPiglin> instance;
 
 FuckZombifiedPiglin& FuckZombifiedPiglin::getInstance() {
     static FuckZombifiedPiglin instance;
